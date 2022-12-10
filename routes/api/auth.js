@@ -5,7 +5,7 @@ const User = require('../../models/User')
 const { check, body, validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const config=require("config")
+const config = require("config")
 
 // @route   GET api/auth
 
@@ -64,7 +64,7 @@ router.post("/", [
                     res.json({ token })
                 }
             )
- 
+
         } catch (err) {
             console.log(err.message);
             res.status(500).send("Server error");
